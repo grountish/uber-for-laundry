@@ -1,30 +1,28 @@
-<h2> Log In </h2>
+<section class="container bg-dark">
+<h1 class="text-center my-5"> Log In </h1>
 
 {{#if errorMessage}}
-  <p class="error-message">
+<p class="error-message">
     {{ errorMessage }}
-  </p>
+</p>
 {{/if}}
 
-<form action="/login" method="post">
-  <div>
-    <label for="email-input"> Email </label>
-    <input type="email" name="email" id="email-input"
-      placeholder="e.g., xena@warrior.company">
-  </div>
-
-  <div>
-    <label for="password-input"> Password </label>
-    <input type="password" name="password" id="password-input"
-      placeholder="e.g., ••••••••••••">
-  </div>
-
-  <button> Log In </button>
-</form>
+<form action="/auth/login" class="text-center" method="post">
+    <div class="form-group my-3">
+        <label for="email-input"> Email </label>
+        <input type="email"  class="form-control col-lg-4 mx-auto" name="email" id="email-input" placeholder="e.g., diana@themyscira.agency">
+    </div>
+    <div class="form-group my-3">
+        <label for="password-input"> Password </label>
+        <input type="password" class="form-control col-lg-4 mx-auto" name="password" id="password-input" placeholder="e.g., ••••••••••••">
+    </div>
+    <button class="btn btn-secondary my-3"> Log In </button>
 
 <p>
-  Don't have an account?
-  <a href="/signup">
-    Create an account.
-  </a>
+    Don't have an account?
+    <a href="/auth/signup">
+       Sign Up
+    </a>
 </p>
+</form>
+</section>
